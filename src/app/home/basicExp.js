@@ -40,7 +40,7 @@ function basicExp(cadena)  {
       return -1;
     }
     if (cadena.length == 2) {
-      if(cadena[0] != '-') {
+      if(cadena[0] != '~') {
          return -1;
       }
       return Negacion(cadena[1]);
@@ -60,7 +60,7 @@ function basicExp(cadena)  {
       }
     }
     if (cadena.length == 4) {
-      if (cadena[0] == '-') {
+      if (cadena[0] == '~') {
           if (cadena[2] != '^' && cadena[2] != 'v' && cadena[2] != '→' && cadena[2] != '↔') {
           return -1;
         }
@@ -74,7 +74,7 @@ function basicExp(cadena)  {
           case '↔': return Bicondicional(Negacion(cadena[1]),cadena[3]);
         }
       } else if (cadena[0] == '0' || cadena[0] == '1') {
-          if (cadena[2] != '-'){
+          if (cadena[2] != '~'){
             return -1;
           }
           if (cadena[1] != '^' && cadena[1] != 'v' && cadena[1] != '→' && cadena[1] != '↔') {
@@ -94,7 +94,7 @@ function basicExp(cadena)  {
       }
     }
     if(cadena.length == 5){
-      if (cadena[0] != '-' || cadena[3] != '-') {
+      if (cadena[0] != '~' || cadena[3] != '~') {
         return -1;
       }
       if (cadena[2] != '^' && cadena[2] != 'v' && cadena[2] != '→' && cadena[2] != '↔') {
