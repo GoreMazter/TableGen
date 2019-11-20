@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div class="grid">
+    <mat-grid-list cols="4" rowHeight="2:1">
+        
+        <mat-grid-tile [colspan]=4></mat-grid-tile>
+
+        <mat-grid-tile><button mat-raised-button class="btn">P</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">Q</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">R</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">S</button></mat-grid-tile>
+
+        <mat-grid-tile><button mat-raised-button class="btn">^</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">v</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">→</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn">↔</button></mat-grid-tile>
+        <mat-grid-tile [colspan]=2><button mat-raised-button class="btn">~</button></mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2"><button mat-raised-button class="btn" color="primary">↓</button></mat-grid-tile>
+        
+
+
+    </mat-grid-list>
+</div>

@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component'; 
+import {MatGridListModule} from '@angular/material/grid-list'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
