@@ -7,23 +7,23 @@
                       </mat-form-field>
         </mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button color="accent"class="btn">←</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button color="accent"class="btn" (click)="write('←')">←</button></mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn">P</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">Q</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">R</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">S</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('P')">P</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('Q')">Q</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('R')">R</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('S')">S</button></mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn">^</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">v</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">→</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">↔</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">~</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('^')">^</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('v')">v</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('→')">→</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('↔')">↔</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('~')">~</button></mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn">(</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn">)</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('(')">(</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write(')')">)</button></mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn" color="primary">↓</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="genTable()" color="primary">↓</button></mat-grid-tile>
         
 
 
