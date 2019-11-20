@@ -1,16 +1,17 @@
 <div class="grid">
     <mat-grid-list cols="4" rowHeight="2:1">
-        
+
         <mat-grid-tile [colspan]=3>
-                <mat-form-field class="textBox">
-                        <input matInput disabled value={{exp}}>
-                      </mat-form-field>
+            <mat-form-field class="textBox">
+                <input matInput disabled value={{exp}}>
+            </mat-form-field>
         </mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button color="accent"class="btn" (click)="write('←')">←</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button color="accent" class="btn" (click)="write('←')">←</button>
+        </mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('1')">1</button></mat-grid-tile>
-        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('0')">0</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('P')">P</button></mat-grid-tile>
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="write('Q')">Q</button></mat-grid-tile>
         <mat-grid-tile><button mat-raised-button class="btn" (click)="write('R')">R</button></mat-grid-tile>
         <mat-grid-tile><button mat-raised-button class="btn" (click)="write('S')">S</button></mat-grid-tile>
 
@@ -23,9 +24,52 @@
         <mat-grid-tile><button mat-raised-button class="btn" (click)="write('(')">(</button></mat-grid-tile>
         <mat-grid-tile><button mat-raised-button class="btn" (click)="write(')')">)</button></mat-grid-tile>
 
-        <mat-grid-tile><button mat-raised-button class="btn" (click)="genTable()" color="primary">↓</button></mat-grid-tile>
-        
+        <mat-grid-tile><button mat-raised-button class="btn" (click)="genTable()" color="primary">↓</button>
+        </mat-grid-tile>
+
 
 
     </mat-grid-list>
 </div>
+<table mat-table [dataSource]="table" class="table">
+
+    <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="space">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"></th>
+        <td mat-cell *matCellDef="let row"></td>
+    </ng-container>
+
+    <ng-container matColumnDef="P">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> P </th>
+        <td mat-cell *matCellDef="let row"> {{row.P}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Q">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Q </th>
+        <td mat-cell *matCellDef="let row"> {{row.Q}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="R">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> R </th>
+        <td mat-cell *matCellDef="let row"> {{row.R}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="S">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> S </th>
+        <td mat-cell *matCellDef="let row"> {{row.S}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="RESULTADO">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> RESULTADO </th>
+        <td mat-cell *matCellDef="let row"> {{row.X}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

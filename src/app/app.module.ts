@@ -12,6 +12,7 @@ import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component'; 
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatInputModule} from '@angular/material/input'; 
+import {MatTableModule} from '@angular/material/table'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

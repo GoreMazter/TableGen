@@ -9,8 +9,10 @@ import basicExp from './basicExp.js';
 export class HomeComponent implements OnInit {
   exp="";
   table=[];
-  
-  constructor() { }
+  displayedColumns: string[] = ['space','P', 'Q', 'R', 'S','RESULTADO'];
+  constructor() {
+    this.initTable();
+   }
 
   ngOnInit() {
   }
