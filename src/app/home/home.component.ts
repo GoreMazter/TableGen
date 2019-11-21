@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
   table=[];
   displayedColumns: string[] = ['space','P', 'Q', 'R', 'S','RESULTADO'];
   constructor() {
-    this.initTable(1,1,1,1);
    }
 
   ngOnInit() {
