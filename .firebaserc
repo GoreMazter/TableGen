@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "tablegen": "tablegen2",
+    "default": "tablegen2"
+  }
+}
